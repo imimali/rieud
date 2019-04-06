@@ -23,8 +23,8 @@ class Asteroid(physicalobject.PhysicalObject):
                 new_asteroid = Asteroid(x=self.x, y=self.y, batch=self.batch)
                 new_asteroid.rotation = random.randint(0, 360)
                 new_asteroid.scale = self.scale * 0.8
-                new_asteroid.velocity_x = (random.random() * 20 + self.velocity_x)
-                new_asteroid.velocity_y = (random.random() * 20 + self.velocity_y)
+                new_asteroid.velocity_x = (2 * self.velocity_x * (0.5 + random.random()) - self.velocity_x)
+                new_asteroid.velocity_y = (2 * self.velocity_y * (0.5 + random.random()) - self.velocity_y)
                 self.new_objects.append(new_asteroid)
 
     def update(self, dt):

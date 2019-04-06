@@ -15,7 +15,7 @@ level_label = pyglet.text.Label(text="My Amazing Game",
 
 player_ship = player.Player(img=resources.player_image, x=400, y=300, batch=main_batch)
 
-asteroids = load.asteroids(40, player_ship.position, batch=main_batch)
+asteroids = load.asteroids(10, player_ship.position, batch=main_batch)
 
 player_lives = load.player_lives(3, batch=main_batch)
 
