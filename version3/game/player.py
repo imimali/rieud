@@ -43,8 +43,8 @@ class Player(physicalobject.PhysicalObject):
             force_y = math.sin(angle_radians) * self.thrust * dt
             self.velocity_x += force_x
             self.velocity_y += force_y
-            self.velocity_x = min(self.velocity_x, 150)
-            self.velocity_y = min(self.velocity_y, 150)
+            self.velocity_x = max(-150,min(self.velocity_x, 150))
+            self.velocity_y = max(-150,min(self.velocity_y, 150))
             self.engine_sprite.rotation = self.rotation
             self.engine_sprite.x = self.x
             self.engine_sprite.y = self.y

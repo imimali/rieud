@@ -36,7 +36,7 @@ def update(dt):
     to_add = []
     for obj in game_objects:
 
-        if obj.new_objects !=[]:
+        if obj.new_objects != []:
             print(obj.new_objects)
         to_add.extend(obj.new_objects)
         obj.new_objects = []

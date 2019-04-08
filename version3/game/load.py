@@ -15,6 +15,7 @@ from . import resources
 def asteroids(num_asteroids, player_position, batch=None):
     asts = []
     for i in range(num_asteroids):
+
         asteroid_x, asteroid_y = player_position
         while distance((asteroid_x, asteroid_y), player_position) < 100:
             asteroid_x = random.randint(0, 800)
